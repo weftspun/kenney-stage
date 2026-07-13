@@ -1,0 +1,198 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "road_dirt_corner"
+    {
+        custom string userProperties:blender:object_name = "road-dirt-corner"
+
+        def Mesh "Scene" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-1, -1, -7.5497894e-8), (1, 1, 0.05000007)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 1, 2, 4, 1, 3, 5, 4, 3, 6, 4, 5, 7, 6, 5, 8, 7, 5, 9, 7, 8, 10, 7, 9, 11, 13, 12, 14, 12, 13, 14, 15, 12, 2, 12, 15, 11, 16, 13, 17, 13, 16, 15, 18, 2, 3, 2, 18, 18, 19, 3, 5, 3, 19, 19, 20, 5, 8, 5, 20, 20, 21, 8, 9, 8, 21, 21, 22, 9, 10, 9, 22, 22, 23, 10, 7, 10, 23, 7, 23, 16, 17, 16, 23, 24, 25, 6, 26, 6, 25, 27, 25, 0, 24, 0, 25, 27, 0, 28, 1, 28, 0, 1, 4, 28, 29, 28, 4, 4, 6, 29, 26, 29, 6, 14, 13, 15, 18, 15, 13, 19, 18, 13, 20, 19, 13, 21, 20, 13, 22, 21, 13, 23, 22, 13, 17, 23, 13, 27, 28, 25, 26, 25, 28, 29, 26, 28]
+            rel material:binding = </root/_materials/dirt>
+            normal3f[] normals = [(-1.7763568e-15, 7.5497894e-8, 1), (-1.7763568e-15, 7.5497894e-8, 1), (-1.7763568e-15, 7.5497894e-8, 1), (-1.5564753e-15, 7.54979e-8, 1), (1.3350296e-14, 7.5497866e-8, 1), (-7.743353e-15, 7.549793e-8, 1), (-1.295831e-14, 7.549788e-8, 1), (1.3350296e-14, 7.5497866e-8, 1), (-1.5564753e-15, 7.54979e-8, 1), (2.5335802e-15, 7.5497894e-8, 1), (-1.295831e-14, 7.549788e-8, 1), (-1.5564753e-15, 7.54979e-8, 1), (-2.3760948e-14, 7.5497894e-8, 1), (-1.295831e-14, 7.549788e-8, 1), (2.5335802e-15, 7.5497894e-8, 1), (-8.045703e-15, 7.5497894e-8, 1), (0, 7.5497894e-8, 0.99999994), (-1.1218626e-14, 7.549791e-8, 1), (-1.7636297e-14, 7.5497915e-8, 1), (-8.045703e-15, 7.5497894e-8, 1), (-1.1218626e-14, 7.549791e-8, 1), (1.0844946e-13, 7.549785e-8, 1), (-8.045703e-15, 7.5497894e-8, 1), (-1.7636297e-14, 7.5497915e-8, 1), (-1.7904253e-13, 7.549785e-8, 1), (-8.045703e-15, 7.5497894e-8, 1), (1.0844946e-13, 7.549785e-8, 1), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (-1, 7.450581e-8, 0), (-1, 7.450581e-8, 0), (-1, 7.450581e-8, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (0.1305263, -0.9914449, 0), (0.25881884, -0.96592593, 0), (0.13052629, -0.9914448, 0), (0.25881928, -0.9659258, 0), (0.13052629, -0.9914448, 0), (0.25881884, -0.96592593, 0), (0.25881884, -0.96592593, 0), (0.49999973, -0.86602557, 0), (0.25881928, -0.9659258, 0), (0.50000006, -0.8660253, 1.5512551e-8), (0.25881928, -0.9659258, 0), (0.49999973, -0.86602557, 0), (0.49999973, -0.86602557, 0), (0.70710665, -0.70710695, 1.7639998e-7), (0.50000006, -0.8660253, 1.5512551e-8), (0.70710695, -0.70710665, 1.9191192e-7), (0.50000006, -0.8660253, 1.5512551e-8), (0.70710665, -0.70710695, 1.7639998e-7), (0.70710665, -0.70710695, 1.7639998e-7), (0.8660253, -0.5000002, 0), (0.70710695, -0.70710665, 1.9191192e-7), (0.86602545, -0.49999982, 0), (0.70710695, -0.70710665, 1.9191192e-7), (0.8660253, -0.5000002, 0), (0.8660253, -0.5000002, 0), (0.96592575, -0.2588192, 0), (0.86602545, -0.49999982, 0), (0.96592593, -0.25881878, 0), (0.86602545, -0.49999982, 0), (0.96592575, -0.2588192, 0), (0.96592575, -0.2588192, 0), (0.9914448, -0.13052624, 0), (0.96592593, -0.25881878, 0), (0.9914448, -0.13052624, 0), (0.96592593, -0.25881878, 0), (0.9914448, -0.13052624, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (-0.2588189, 0.96592593, 0), (-0.2588189, 0.9659259, 0), (-0.49999988, 0.86602545, 0), (-0.4999999, 0.86602545, 0), (-0.49999988, 0.86602545, 0), (-0.2588189, 0.9659259, 0), (-0.4999999, 0.86602545, 0), (-0.8660268, 0.49999756, 0), (-0.49999988, 0.86602545, 0), (-0.8660241, 0.50000226, 0), (-0.49999988, 0.86602545, 0), (-0.8660268, 0.49999756, 0), (-0.8660268, 0.49999756, 0), (-0.9659259, 0.25881898, 0), (-0.8660241, 0.50000226, 0), (-0.9659258, 0.25881895, 0), (-0.8660241, 0.50000226, 0), (-0.9659259, 0.25881898, 0), (0, 7.4505806e-8, 1), (-8.7007523e-10, 7.456145e-8, 1), (2.7765954e-9, 7.438238e-8, 1), (8.110626e-9, 7.405979e-8, 1), (2.7765954e-9, 7.438238e-8, 1), (-8.7007523e-10, 7.456145e-8, 1), (-5.5556604e-9, 7.519185e-8, 1), (8.110626e-9, 7.405979e-8, 1), (-8.7007523e-10, 7.456145e-8, 1), (-7.223288e-9, 7.4993835e-8, 1), (-5.5556604e-9, 7.519185e-8, 1), (-8.7007523e-10, 7.456145e-8, 1), (6.1638326e-9, 7.321927e-8, 1), (-7.223288e-9, 7.4993835e-8, 1), (-8.7007523e-10, 7.456145e-8, 1), (3.5858498e-9, 7.5375716e-8, 1), (6.1638326e-9, 7.321927e-8, 1), (-8.7007523e-10, 7.456145e-8, 1), (0, 7.483265e-8, 1), (3.5858498e-9, 7.5375716e-8, 1), (-8.7007523e-10, 7.456145e-8, 1), (0, 7.4505806e-8, 1), (0, 7.483265e-8, 1), (-8.7007523e-10, 7.456145e-8, 1), (0, 7.4505806e-8, 1), (0, 7.54219e-8, 1), (0, 7.64544e-8, 1), (0, 7.633801e-8, 1), (0, 7.64544e-8, 1), (0, 7.54219e-8, 1), (0, 7.1974576e-8, 1), (0, 7.633801e-8, 1), (0, 7.54219e-8, 1)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(1, -0.5, 3.7748947e-8), (0.75, -0.5669873, 4.2806345e-8), (1, 0.5, -3.7748947e-8), (0.6117714, 0.4488887, -3.3890153e-8), (0.5669873, -0.75, 5.6623424e-8), (0.25, 0.29903808, -2.2576746e-8), (0.5, -1, 7.5497894e-8), (-0.5, -1, 7.5497894e-8), (-0.06066017, 0.06066017, -4.5797153e-9), (-0.29903808, -0.25, 1.8874474e-8), (-0.4488887, -0.6117714, 4.6187452e-8), (-1, 1, -7.5497894e-8), (1, 1, -7.5497894e-8), (-1, 1, 0.049999923), (1, 1, 0.049999923), (1, 0.5, 0.04999996), (-1, -1, 7.5497894e-8), (-1, -1, 0.05000007), (0.6117714, 0.4488887, 0.049999963), (0.25, 0.29903808, 0.049999975), (-0.06066017, 0.060660172, 0.049999993), (-0.29903808, -0.25, 0.050000016), (-0.4488887, -0.6117714, 0.05000004), (-0.5, -1, 0.05000007), (1, -1, 7.5497894e-8), (1, -1, 0.05000007), (0.5, -1, 0.05000007), (1, -0.5, 0.050000034), (0.75, -0.5669873, 0.050000038), (0.5669873, -0.75, 0.050000053)]
+            texCoord2f[] primvars:st = [(-1.0000001, -1.9999999), (5.05, -13), (6.8031945, -11.45), (-0.93301284, -2.25), (6.541395, -11.45), (-2.0000002, -1.9999999), (5.5, -11.45), (4.447, -11.45), (-1.948889, -2.3882284), (4.8396993, -11.45), (-0.7500001, -2.4330127), (6.279596, -11.45), (-1.7990383, -2.75), (5.232398, -11.45), (-0.5000001, -2.5), (4.5, -13.55), (6.0177965, -11.45), (-0.5000002, -3.5), (6.8031945, -11.45), (3.5, -13.55), (-1.5606604, -3.0606601), (5.6250973, -11.45), (-1.2500002, -3.299038), (6.0177965, -11.45), (-0.8882288, -3.4488888), (6.4104953, -11.45), (3, -11.45), (5, -11.45), (3, -11.5), (8, -11.5), (5, -11.5), (8, -13.5), (5.5, -11.5), (4.447, -11.5), (7.5, -13.5), (1, -11.45), (3, -13.55), (1, -11.5), (3, -13.5), (6, -11.5), (4.8396993, -11.5), (7.448889, -13.111772), (5.232398, -11.5), (7.299038, -12.75), (5.6250973, -11.5), (7.0606604, -12.43934), (6.0177965, -11.5), (6.75, -12.200962), (6.4104953, -11.5), (6.3882284, -12.051111), (6.8031945, -11.5), (3.5, -13.5), (6, -12), (5, -13.55), (5.05, -13.5), (5, -13.5), (3, -11.5), (4.5, -13.5), (6.0177965, -11.5), (2.5, -11.5), (5, -13), (6.8031945, -11.5), (3, -11), (6.541395, -11.5), (2.75, -11.066987), (6.279596, -11.5), (2.5669873, -11.25)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 5, 3, 8, 3, 5, 10, 3, 8, 12, 10, 8, 14, 10, 12, 17, 14, 12, 20, 17, 12, 22, 17, 20, 24, 17, 22, 26, 28, 27, 30, 27, 28, 30, 32, 27, 6, 27, 32, 26, 35, 28, 37, 28, 35, 33, 40, 7, 9, 7, 40, 40, 42, 9, 13, 9, 42, 42, 44, 13, 21, 13, 44, 44, 46, 21, 23, 21, 46, 46, 48, 23, 25, 23, 48, 48, 50, 25, 18, 25, 50, 19, 51, 36, 38, 36, 51, 53, 55, 15, 57, 15, 55, 60, 55, 1, 54, 1, 55, 61, 2, 63, 4, 63, 2, 4, 11, 63, 65, 63, 11, 11, 16, 65, 58, 65, 16, 31, 29, 34, 41, 34, 29, 43, 41, 29, 45, 43, 29, 47, 45, 29, 49, 47, 29, 52, 49, 29, 39, 52, 29, 62, 64, 56, 59, 56, 64, 66, 59, 64]
+            uniform token subdivisionScheme = "none"
+            uniform token subsetFamily:materialBind:familyType = "nonOverlapping"
+            custom string userProperties:blender:data_name = "Scene"
+
+            def GeomSubset "dirt" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+                rel material:binding = </root/_materials/dirt>
+            }
+
+            def GeomSubset "concreteSmooth" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38]
+                rel material:binding = </root/_materials/concreteSmooth>
+            }
+
+            def GeomSubset "concrete" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+                rel material:binding = </root/_materials/concrete>
+            }
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "dirt"
+        {
+            token outputs:surface.connect = </root/_materials/dirt/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "dirt"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor.connect = </root/_materials/dirt/Image_Texture.outputs:rgb>
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5
+                float inputs:specular = 0.5
+                token outputs:surface
+            }
+
+            def Shader "Image_Texture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./textures/T_Dirt_D.png@
+                token inputs:sourceColorSpace = "sRGB"
+                float2 inputs:st.connect = </root/_materials/dirt/uvmap.outputs:result>
+                token inputs:wrapS = "repeat"
+                token inputs:wrapT = "repeat"
+                float3 outputs:rgb
+            }
+
+            def Shader "uvmap"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                string inputs:varname = "st"
+                float2 outputs:result
+            }
+        }
+
+        def Material "concreteSmooth"
+        {
+            token outputs:surface.connect = </root/_materials/concreteSmooth/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "concreteSmooth"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor.connect = </root/_materials/concreteSmooth/Image_Texture.outputs:rgb>
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5
+                float inputs:specular = 0.5
+                token outputs:surface
+            }
+
+            def Shader "Image_Texture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./textures/T_Tiles_D.png@
+                token inputs:sourceColorSpace = "sRGB"
+                float2 inputs:st.connect = </root/_materials/concreteSmooth/uvmap.outputs:result>
+                token inputs:wrapS = "repeat"
+                token inputs:wrapT = "repeat"
+                float3 outputs:rgb
+            }
+
+            def Shader "uvmap"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                string inputs:varname = "st"
+                float2 outputs:result
+            }
+        }
+
+        def Material "concrete"
+        {
+            token outputs:surface.connect = </root/_materials/concrete/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "concrete"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor.connect = </root/_materials/concrete/Image_Texture.outputs:rgb>
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5
+                float inputs:specular = 0.5
+                token outputs:surface
+            }
+
+            def Shader "Image_Texture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./textures/T_Concrete_D.png@
+                token inputs:sourceColorSpace = "sRGB"
+                float2 inputs:st.connect = </root/_materials/concrete/uvmap.outputs:result>
+                token inputs:wrapS = "repeat"
+                token inputs:wrapT = "repeat"
+                float3 outputs:rgb
+            }
+
+            def Shader "uvmap"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                string inputs:varname = "st"
+                float2 outputs:result
+            }
+        }
+    }
+}
+

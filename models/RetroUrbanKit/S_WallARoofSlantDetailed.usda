@@ -1,0 +1,198 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "wall_a_roof_slant_detailed"
+    {
+        custom string userProperties:blender:object_name = "wall-a-roof-slant-detailed"
+
+        def Mesh "Scene" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-0.5, -0.5685822, -4.292676e-8), (0.5, 0.56858224, 0.50000006)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 5, 4, 2, 5, 1, 3, 1, 5, 4, 5, 0, 2, 0, 5, 0, 2, 6, 7, 6, 2, 5, 4, 8, 9, 8, 4, 3, 4, 1, 0, 1, 4]
+            rel material:binding = </root/_materials/wall_lines>
+            normal3f[] normals = [(0, 1, 0), (0, 1, 0), (0, 1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, -8.402268e-8, 0), (1, -3.5186616e-8, 0), (1, -1.1920929e-7, 0), (1, -3.5186616e-8, 0), (1, -8.402268e-8, 0), (-0.4472136, 6.752737e-8, 0.8944272), (-0.44721362, 7.418856e-8, 0.89442724), (-0.4472136, 7.330682e-8, 0.8944272), (-0.4472136, 7.996802e-8, 0.8944272), (-0.4472136, 7.330682e-8, 0.8944272), (-0.44721362, 7.418856e-8, 0.89442724), (-0.44721296, 6.7527324e-8, 0.8944275), (-0.44721413, 2.6330422e-9, 0.8944269), (-0.44721302, 6.489429e-8, 0.8944275), (-0.44721416, 0, 0.8944268), (-0.44721302, 6.489429e-8, 0.8944275), (-0.44721413, 2.6330422e-9, 0.8944269), (-0.44721407, 0, 0.894427), (-0.44721305, 6.489429e-8, 0.8944275), (-0.44721398, 2.633042e-9, 0.894427), (-0.447213, 6.7527324e-8, 0.8944275), (-0.44721398, 2.633042e-9, 0.894427), (-0.44721305, 6.489429e-8, 0.8944275), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(-0.5, 0.5, -3.7748947e-8), (0.5, 0.5, -3.7748947e-8), (0.5, 0.50000006, 0.49999997), (0.5, -0.5, 3.7748947e-8), (-0.5, -0.5, 3.7748947e-8), (0.5, -0.49999997, 0.50000006), (-0.5, 0.5685822, -4.292676e-8), (0.5, 0.56858224, 0.49999997), (0.5, -0.5685821, 0.50000006), (-0.5, -0.5685822, 4.292676e-8)]
+            texCoord2f[] primvars:st = [(1.7881412e-7, 2.0000002), (-1, -8), (-16, -11), (-0.9999997, 2.0000002), (-15, -11), (-0.9999997, 2.5000002), (-1, -7), (-1.9999996, 2.0000002), (-15, -10), (-2.9999995, 2.0000005), (1.4432899e-15, -8), (-1, -8), (-16, -10), (-1.9999996, 2.5000002), (1.4432899e-15, -7), (-1, -7), (-1.0685822, -8), (-1.0685822, -7), (-0.93141776, -7), (-0.93141776, -8)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 5, 3, 7, 13, 9, 5, 13, 3, 7, 3, 13, 10, 14, 1, 6, 1, 14, 1, 6, 16, 17, 16, 6, 15, 11, 18, 19, 18, 11, 8, 12, 4, 2, 4, 12]
+            uniform token subdivisionScheme = "none"
+            uniform token subsetFamily:materialBind:familyType = "nonOverlapping"
+            custom string userProperties:blender:data_name = "Scene"
+
+            def GeomSubset "wall_lines" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [0, 1, 2, 3]
+                rel material:binding = </root/_materials/wall_lines>
+            }
+
+            def GeomSubset "roof" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [4, 5, 6, 7, 8, 9]
+                rel material:binding = </root/_materials/roof>
+            }
+
+            def GeomSubset "concrete" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [10, 11]
+                rel material:binding = </root/_materials/concrete>
+            }
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "wall_lines"
+        {
+            token outputs:surface.connect = </root/_materials/wall_lines/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "wall_lines"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor.connect = </root/_materials/wall_lines/Image_Texture.outputs:rgb>
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5
+                float inputs:specular = 0.5
+                token outputs:surface
+            }
+
+            def Shader "Image_Texture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./textures/T_WallLines_D.png@
+                token inputs:sourceColorSpace = "sRGB"
+                float2 inputs:st.connect = </root/_materials/wall_lines/uvmap.outputs:result>
+                token inputs:wrapS = "repeat"
+                token inputs:wrapT = "repeat"
+                float3 outputs:rgb
+            }
+
+            def Shader "uvmap"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                string inputs:varname = "st"
+                float2 outputs:result
+            }
+        }
+
+        def Material "roof"
+        {
+            token outputs:surface.connect = </root/_materials/roof/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "roof"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor.connect = </root/_materials/roof/Image_Texture.outputs:rgb>
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5
+                float inputs:specular = 0.5
+                token outputs:surface
+            }
+
+            def Shader "Image_Texture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./textures/T_Roof_D.png@
+                token inputs:sourceColorSpace = "sRGB"
+                float2 inputs:st.connect = </root/_materials/roof/uvmap.outputs:result>
+                token inputs:wrapS = "repeat"
+                token inputs:wrapT = "repeat"
+                float3 outputs:rgb
+            }
+
+            def Shader "uvmap"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                string inputs:varname = "st"
+                float2 outputs:result
+            }
+        }
+
+        def Material "concrete"
+        {
+            token outputs:surface.connect = </root/_materials/concrete/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "concrete"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor.connect = </root/_materials/concrete/Image_Texture.outputs:rgb>
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5
+                float inputs:specular = 0.5
+                token outputs:surface
+            }
+
+            def Shader "Image_Texture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./textures/T_Concrete_D.png@
+                token inputs:sourceColorSpace = "sRGB"
+                float2 inputs:st.connect = </root/_materials/concrete/uvmap.outputs:result>
+                token inputs:wrapS = "repeat"
+                token inputs:wrapT = "repeat"
+                float3 outputs:rgb
+            }
+
+            def Shader "uvmap"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                string inputs:varname = "st"
+                float2 outputs:result
+            }
+        }
+    }
+}
+
