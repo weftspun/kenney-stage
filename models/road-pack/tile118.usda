@@ -1,0 +1,145 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "tile118"
+    {
+        custom string userProperties:blender:object_name = "tile118"
+        custom string userProperties:currentUVSet = "map1"
+
+        def Mesh "Mesh" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-0.49999997, -0.49999997, -3.7748947e-8), (0.49999997, 0.5, 0.20000003)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 10, 9, 11, 9, 10, 12, 14, 13, 15, 13, 14, 16, 18, 17, 19, 17, 18, 20, 21, 13, 12, 13, 21, 22, 4, 23, 5, 23, 4, 24, 25, 0, 2, 0, 25, 26, 28, 27, 29, 27, 28, 17, 19, 30, 31, 30, 19, 32, 34, 33, 35, 37, 36]
+            rel material:binding = </root/_materials/asphalt>
+            normal3f[] normals = [(-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (0, -1, 2.9802155e-7), (0, -1, 5.582367e-7), (0, -1, 1.8904988e-8), (0, -1, 0), (0, -1, 1.8904988e-8), (0, -1, 5.582367e-7), (0, 8.940697e-8, 1), (0, 8.940697e-8, 1), (0, 8.940697e-8, 1), (0, 8.940697e-8, 1), (0, 8.940697e-8, 1), (0, 8.940697e-8, 1), (0, 1, -2.980233e-7), (0, 1, -5.5823676e-7), (0, 1, -1.8904881e-8), (0, 1, 0), (0, 1, -1.8904881e-8), (0, 1, -5.5823676e-7), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 0.99999994, 0), (0, 1, 0), (0, 1, -1.8904881e-8), (0, 1, -2.980233e-7), (0, 1, -1.8904881e-8), (0, 1, 0), (0, -0.99999994, 0), (0, -1, 2.9802155e-7), (0, -1, 0), (0, -1, 1.8904988e-8), (0, -1, 0), (0, -1, 2.9802155e-7), (-0.99999994, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0.99999994, 0, 0), (1, 0, 0), (1, 0, 0), (0, -7.4505806e-8, -1), (0, -7.4505806e-8, -1), (0, -7.4505806e-8, -1), (0, -7.4505806e-8, -1), (0, -7.4505806e-8, -1), (0, -7.4505806e-8, -1)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(-0.49999997, 0.49999997, 0.09999996), (-0.49999997, 0.5, 0.19999994), (-0.49999997, -0.49999997, 0.10000003), (-0.49999997, -0.49999994, 0.20000003), (0.49999997, -0.49999997, 0.10000003), (-0.49999997, -0.49999997, 0.10000003), (0.49999997, -0.49999994, 0.20000003), (-0.49999997, -0.49999994, 0.20000003), (0.49999997, 0.5, 0.19999994), (0.49999997, -0.49999994, 0.20000003), (-0.49999997, 0.5, 0.19999994), (-0.49999997, -0.49999994, 0.20000003), (-0.49999997, 0.49999997, 0.09999996), (0.49999997, 0.49999997, 0.09999996), (-0.49999997, 0.5, 0.19999994), (0.49999997, 0.5, 0.19999994), (0.49999997, 0.5, 0.19999994), (0.49999997, 0.49999997, 0.09999996), (0.49999997, -0.49999994, 0.20000003), (0.49999997, -0.49999997, 0.10000003), (0.49999997, 0.49999997, -3.7748947e-8), (-0.49999997, 0.49999997, -3.7748947e-8), (0.49999997, -0.49999997, 3.7748947e-8), (-0.49999997, -0.49999997, 3.7748947e-8), (-0.49999997, 0.49999997, -3.7748947e-8), (-0.49999997, -0.49999997, 3.7748947e-8), (0.49999997, 0.49999997, -3.7748947e-8), (-0.49999997, 0.49999997, -3.7748947e-8), (0.49999997, -0.49999997, 3.7748947e-8), (-0.49999997, -0.49999997, 3.7748947e-8), (0.49999997, 0.49999997, -3.7748947e-8), (0.49999997, -0.49999997, 3.7748947e-8), (0.49999997, 0.49999997, 0.09999996), (-0.49999997, 0.49999997, 0.09999996), (0.49999997, -0.49999997, 0.10000003), (-0.49999997, -0.49999997, 0.10000003), (0.49999997, -0.49999997, 0.10000003), (-0.49999997, 0.49999997, 0.09999996)]
+            texCoord2f[] primvars:st = [(-59.05512, 11.81102), (-59.05512, 23.62205), (59.05512, 11.81102), (59.05512, 23.62205), (59.05512, 11.81102), (-59.05512, 11.81102), (59.05512, 23.62205), (-59.05512, 23.62205), (-59.05512, -59.05512), (-59.05512, 59.05512), (59.05512, -59.05512), (59.05512, 59.05512), (59.05512, 11.81102), (-59.05512, 11.81102), (59.05512, 23.62205), (-59.05512, 23.62205), (59.05512, 23.62205), (59.05512, 11.81102), (-59.05512, 23.62205), (-59.05512, 11.81102), (-59.05512, 2.131628e-14), (59.05512, 6.394885e-14), (59.05512, -7.494269e-13), (-59.05512, -6.85478e-13), (-59.05512, 3.326376e-11), (59.05512, 3.326376e-11), (59.05512, -59.05512), (-59.05512, -59.05512), (59.05512, 59.05512), (-59.05512, 59.05512), (59.05512, -1.410935e-13), (-59.05512, -1.624098e-13), (-59.05512, 11.81102), (-59.05512, 23.62205), (59.05512, 11.81102), (-59.05512, 11.81102), (-59.05512, 23.62205), (59.05512, 11.81102)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 10, 9, 11, 9, 10, 12, 14, 13, 15, 13, 14, 16, 18, 17, 19, 17, 18, 20, 21, 13, 12, 13, 21, 22, 4, 23, 5, 23, 4, 24, 25, 0, 2, 0, 25, 26, 28, 27, 29, 27, 28, 17, 19, 30, 31, 30, 19, 32, 34, 33, 35, 37, 36]
+            uniform token subdivisionScheme = "none"
+            uniform token subsetFamily:materialBind:familyType = "nonOverlapping"
+            custom string userProperties:blender:data_name = "Mesh"
+
+            def GeomSubset "asphalt" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                rel material:binding = </root/_materials/asphalt>
+            }
+
+            def GeomSubset "pavement" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+                rel material:binding = </root/_materials/pavement>
+            }
+
+            def GeomSubset "_defaultMat" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [20, 21]
+                rel material:binding = </root/_materials/_defaultMat>
+            }
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "asphalt"
+        {
+            token outputs:surface.connect = </root/_materials/asphalt/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "asphalt"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.4117647, 0.4117647, 0.4117647)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "pavement"
+        {
+            token outputs:surface.connect = </root/_materials/pavement/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "pavement"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.8470588, 0.827451, 0.7490196)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "_defaultMat"
+        {
+            token outputs:surface.connect = </root/_materials/_defaultMat/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "_defaultMat"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (1, 1, 1)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+    }
+}
+

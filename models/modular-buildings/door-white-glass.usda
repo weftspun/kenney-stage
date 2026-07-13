@@ -1,0 +1,89 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "door_white_glass"
+    {
+        custom string userProperties:blender:object_name = "door_white_glass"
+
+        def Mesh "Scene" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-0.125, -0.024999999, -1.8874475e-9), (0.125, 0.025000036, 0.5)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 9, 3, 1, 3, 9, 9, 8, 10, 11, 10, 8, 12, 13, 5, 4, 5, 13, 12, 14, 13, 15, 13, 14, 11, 2, 10, 0, 10, 2, 6, 4, 15, 13, 15, 4, 7, 14, 5, 12, 5, 14, 11, 8, 6, 2, 11, 6, 6, 8, 7, 6, 15, 2, 14, 7, 8, 2, 15, 3, 15, 14, 3, 8, 3, 14, 9, 10, 1, 0, 1, 10]
+            rel material:binding = </root/_materials/colormap>
+            normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1.4901163e-7, 1), (0, 1.4901161e-7, 1), (0, 1.4901161e-7, 1), (0, 1.4901161e-7, 1), (0, 1.4901161e-7, 1), (0, 1.4901161e-7, 1), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (0, 1, -7.4505806e-8), (0, 1, -7.4505806e-8), (0, 1, -7.4505806e-8), (0, 1, -7.4505806e-8), (0, 1, -7.4505806e-8), (0, 1, -7.4505806e-8), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -7.549791e-8, -1), (0, -7.549791e-8, -1), (0, -7.549791e-8, -1), (0, -7.549791e-8, -1), (0, -7.549791e-8, -1), (0, -7.549791e-8, -1), (-3.7155627e-9, -1, 3.8375873e-8), (2.5691191e-9, -1, 6.078274e-8), (-2.694613e-9, -1, 5.6142007e-8), (3.715547e-9, -1, 8.398289e-8), (-3.7155627e-9, -1, 3.8375873e-8), (-2.694613e-9, -1, 5.6142007e-8), (-2.694613e-9, -1, 5.6142007e-8), (2.5691191e-9, -1, 6.078274e-8), (2.909494e-9, -1, 5.5808066e-8), (-2.694613e-9, -1, 5.6142007e-8), (2.6944573e-9, -1, 8.9931454e-8), (3.715547e-9, -1, 8.398289e-8), (-2.9096616e-9, -1, 8.4335994e-8), (2.909494e-9, -1, 5.5808066e-8), (2.5691191e-9, -1, 6.078274e-8), (3.715547e-9, -1, 8.398289e-8), (2.6944573e-9, -1, 8.9931454e-8), (-2.56913e-9, -1, 9.928832e-8), (2.6944573e-9, -1, 8.9931454e-8), (-2.9096616e-9, -1, 8.4335994e-8), (-2.56913e-9, -1, 9.928832e-8), (2.5691191e-9, -1, 6.078274e-8), (-2.56913e-9, -1, 9.928832e-8), (-2.9096616e-9, -1, 8.4335994e-8), (1.0097983e-12, -1, 7.549791e-8), (1.0097983e-12, -1, 7.5497894e-8), (1.0097983e-12, -1, 7.549791e-8), (1.0097983e-12, -1, 7.5497894e-8), (1.0097983e-12, -1, 7.549791e-8), (1.0097983e-12, -1, 7.5497894e-8)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(-0.07076412, 3.365418e-8, 0.44576412), (-0.07076412, 4.094622e-9, 0.054235872), (-0.07076412, -0.024999965, 0.44576412), (-0.07076412, -0.024999995, 0.054235876), (0.125, 0.025000036, 0.5), (0.125, 0.024999999, -1.8874475e-9), (0.125, -0.024999961, 0.5), (0.125, -0.024999999, 1.8874475e-9), (0.07076412, -0.024999995, 0.054235876), (0.07076412, 4.0947636e-9, 0.054235872), (0.07076412, 3.3654324e-8, 0.44576412), (0.07076412, -0.024999965, 0.44576412), (-0.125, 0.024999999, -1.8874475e-9), (-0.125, 0.025000036, 0.5), (-0.125, -0.024999999, 1.8874475e-9), (-0.125, -0.024999961, 0.5)]
+            texCoord2f[] primvars:st = [(0.46875, 0.20330565), (0.71875, 0.45330566), (0.46875, 0.04669435), (0.71875, 0.29669434), (0.46875, 0.20330565), (0.46875, 0.04669435), (0.46875, 0.225), (0.46875, 0.025), (0.46875, 0.225), (0.46875, 0.025), (0.46875, 0.04669435), (0.46875, 0.04669435), (0.71875, 0.29669434), (0.46875, 0.20330565), (0.71875, 0.45330566), (0.46875, 0.20330565), (0.46875, 0.025), (0.46875, 0.225), (0.46875, 0.025), (0.46875, 0.225)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 4, 2, 5, 2, 4, 6, 8, 7, 9, 7, 8, 10, 11, 5, 2, 5, 11, 11, 10, 13, 15, 13, 10, 16, 17, 7, 6, 7, 17, 16, 18, 17, 19, 17, 18, 15, 4, 13, 0, 13, 4, 8, 6, 19, 17, 19, 6, 9, 18, 7, 16, 7, 18, 15, 10, 8, 4, 15, 8, 8, 10, 9, 8, 19, 4, 18, 9, 10, 4, 19, 5, 19, 18, 5, 10, 5, 18, 12, 14, 3, 1, 3, 14]
+            uniform token subdivisionScheme = "none"
+            custom string userProperties:blender:data_name = "Scene"
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "colormap"
+        {
+            token outputs:surface.connect = </root/_materials/colormap/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "colormap"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor.connect = </root/_materials/colormap/Image_Texture.outputs:rgb>
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5
+                float inputs:specular = 0.5
+                token outputs:surface
+            }
+
+            def Shader "Image_Texture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./textures/colormap.png@
+                token inputs:sourceColorSpace = "sRGB"
+                float2 inputs:st.connect = </root/_materials/colormap/uvmap.outputs:result>
+                token inputs:wrapS = "repeat"
+                token inputs:wrapT = "repeat"
+                float3 outputs:rgb
+            }
+
+            def Shader "uvmap"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                string inputs:varname = "st"
+                float2 outputs:result
+            }
+        }
+    }
+}
+

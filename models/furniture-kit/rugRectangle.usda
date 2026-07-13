@@ -1,0 +1,112 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "rugRectangle"
+    {
+        custom string userProperties:blender:object_name = "rugRectangle"
+        custom string userProperties:currentUVSet = "map1"
+
+        def Mesh "Mesh" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-15.7, -9.2, 0), (0, 7.549789e-9, 0.10000068)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 10, 9, 11, 9, 10, 12, 9, 11, 13, 12, 11, 9, 14, 8, 15, 8, 14, 13, 15, 14, 11, 15, 13, 16, 18, 17, 19, 17, 18, 20, 22, 21, 23, 21, 22, 24, 26, 25, 27, 25, 26, 28, 30, 29, 31, 29, 30, 14, 9, 28, 12, 28, 9, 30, 28, 12, 31, 30, 12, 28, 29, 14, 13, 14, 29, 31, 13, 29, 12, 13, 31]
+            rel material:binding = </root/_materials/carpet>
+            normal3f[] normals = [(0, -7.5497894e-8, -1), (0, -7.549789e-8, -1), (0, -7.549789e-8, -1), (0, -7.5497894e-8, -1), (0, -7.549789e-8, -1), (0, -7.549789e-8, -1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (-7.554609e-9, 7.3705166e-8, 1), (9.976498e-9, 7.699372e-8, 1), (1.4390225e-9, 7.643882e-8, 1), (1.047443e-9, 7.6983234e-8, 1), (1.4390225e-9, 7.643882e-8, 1), (9.976498e-9, 7.699372e-8, 1), (2.1603133e-9, 7.6449396e-8, 1), (1.4390225e-9, 7.643882e-8, 1), (1.047443e-9, 7.6983234e-8, 1), (-2.9985676e-9, 7.398036e-8, 1), (2.1603133e-9, 7.6449396e-8, 1), (1.047443e-9, 7.6983234e-8, 1), (1.4390225e-9, 7.643882e-8, 1), (-3.37602e-9, 7.399091e-8, 1), (-7.554609e-9, 7.3705166e-8, 1), (-2.8504743e-9, 7.3715746e-8, 1), (-7.554609e-9, 7.3705166e-8, 1), (-3.37602e-9, 7.399091e-8, 1), (-2.9985676e-9, 7.398036e-8, 1), (-2.8504743e-9, 7.3715746e-8, 1), (-3.37602e-9, 7.399091e-8, 1), (1.047443e-9, 7.6983234e-8, 1), (-2.8504743e-9, 7.3715746e-8, 1), (-2.9985676e-9, 7.398036e-8, 1), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, -7.54979e-8), (0, 1, -7.54979e-8), (0, 1, -7.54979e-8), (0, 1, -7.54979e-8), (0, 1, -7.54979e-8), (0, 1, -7.54979e-8), (-1, -2.5915068e-7, 0), (-1, 2.5556525e-7, 0), (-1, -2.5556528e-7, 0), (-1, 2.5915065e-7, 0), (-1, -2.5556528e-7, 0), (-1, 2.5556525e-7, 0), (-1.41501815e-8, 7.495058e-8, 1), (2.820649e-9, 7.501362e-8, 1), (1.8804645e-8, 7.501356e-8, 1), (-3.0165592e-9, 7.495052e-8, 1), (1.8804645e-8, 7.501356e-8, 1), (2.820649e-9, 7.501362e-8, 1), (-3.37602e-9, 7.399091e-8, 1), (1.4390225e-9, 7.643882e-8, 1), (-1.41501815e-8, 7.495058e-8, 1), (2.1603133e-9, 7.6449396e-8, 1), (-1.41501815e-8, 7.495058e-8, 1), (1.4390225e-9, 7.643882e-8, 1), (2.820649e-9, 7.501362e-8, 1), (-1.41501815e-8, 7.495058e-8, 1), (2.1603133e-9, 7.6449396e-8, 1), (-3.0165592e-9, 7.495052e-8, 1), (2.820649e-9, 7.501362e-8, 1), (2.1603133e-9, 7.6449396e-8, 1), (-1.41501815e-8, 7.495058e-8, 1), (1.8804645e-8, 7.501356e-8, 1), (-3.37602e-9, 7.399091e-8, 1), (-2.9985676e-9, 7.398036e-8, 1), (-3.37602e-9, 7.399091e-8, 1), (1.8804645e-8, 7.501356e-8, 1), (-3.0165592e-9, 7.495052e-8, 1), (-2.9985676e-9, 7.398036e-8, 1), (1.8804645e-8, 7.501356e-8, 1), (2.1603133e-9, 7.6449396e-8, 1), (-2.9985676e-9, 7.398036e-8, 1), (-3.0165592e-9, 7.495052e-8, 1)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(0, -9.2, 6.9458065e-7), (0, 0, 0), (-15.7, -9.2, 6.9458065e-7), (-15.7, 0, 0), (0, -9.2, 6.9458065e-7), (-15.7, -9.2, 6.9458065e-7), (0, -9.2, 0.10000068), (-15.7, -9.2, 0.10000068), (0, -9.2, 0.10000068), (-1.136455, -1.136455, 0.100000076), (0, 7.549789e-9, 0.09999999), (-15.7, 7.549789e-9, 0.09999999), (-14.56355, -1.136455, 0.100000076), (-14.56355, -8.063545, 0.1000006), (-1.136455, -8.063545, 0.1000006), (-15.7, -9.2, 0.10000068), (0, 7.549789e-9, 0.09999999), (0, 0, 0), (0, -9.2, 0.10000068), (0, -9.2, 6.9458065e-7), (-15.7, 0, 0), (0, 0, 0), (-15.7, 7.549789e-9, 0.09999999), (0, 7.549789e-9, 0.09999999), (-15.7, 0, 0), (-15.7, 7.549789e-9, 0.09999999), (-15.7, -9.2, 6.9458065e-7), (-15.7, -9.2, 0.10000068), (-1.638089, -1.638089, 0.10000011), (-1.638089, -7.561911, 0.10000056), (-14.06191, -1.638089, 0.10000011), (-14.06191, -7.561911, 0.10000056)]
+            texCoord2f[] primvars:st = [(0, 36.22047), (0, 0), (-61.81102, 36.22047), (-61.81102, 0), (0, 0), (-61.81102, 0), (0, 0.3937008), (-61.81102, 0.3937008), (0, 36.22047), (4.474232, 4.474232), (0, 0), (61.81102, 0), (57.33679, 4.474232), (57.33679, 31.74624), (4.474232, 31.74624), (61.81102, 36.22047), (0, 0.3937008), (0, 0), (-36.22047, 0.3937008), (-36.22047, 0), (61.81102, 0), (0, 0), (61.81102, 0.3937008), (0, 0.3937008), (0, 0), (0, 0.3937008), (36.22047, 0), (36.22047, 0.3937008), (6.44917, 6.44917), (6.44917, 29.7713), (55.36185, 6.44917), (55.36185, 29.7713)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 10, 9, 11, 9, 10, 12, 9, 11, 13, 12, 11, 9, 14, 8, 15, 8, 14, 13, 15, 14, 11, 15, 13, 16, 18, 17, 19, 17, 18, 20, 22, 21, 23, 21, 22, 24, 26, 25, 27, 25, 26, 28, 30, 29, 31, 29, 30, 14, 9, 28, 12, 28, 9, 30, 28, 12, 31, 30, 12, 28, 29, 14, 13, 14, 29, 31, 13, 29, 12, 13, 31]
+            uniform token subdivisionScheme = "none"
+            uniform token subsetFamily:materialBind:familyType = "nonOverlapping"
+            custom string userProperties:blender:data_name = "Mesh"
+
+            def GeomSubset "carpet" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+                rel material:binding = </root/_materials/carpet>
+            }
+
+            def GeomSubset "carpetDarker" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [20, 21, 22, 23, 24, 25, 26, 27]
+                rel material:binding = </root/_materials/carpetDarker>
+            }
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "carpet"
+        {
+            token outputs:surface.connect = </root/_materials/carpet/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "carpet"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.9433962, 0.367176, 0.3426486)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "carpetDarker"
+        {
+            token outputs:surface.connect = </root/_materials/carpetDarker/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "carpetDarker"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.608, 0.2978127, 0.285152)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+    }
+}
+

@@ -1,0 +1,112 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "cliffGrey_halfCorner"
+    {
+        custom string userProperties:blender:object_name = "cliffGrey_halfCorner"
+        custom string userProperties:currentUVSet = "map1"
+
+        def Mesh "Mesh" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-126.58422, 31.41578, 0), (-122, 36, 5)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 9, 8, 10, 8, 9, 11, 13, 12, 14, 12, 13, 15, 17, 16, 18, 16, 17, 17, 19, 18, 18, 19, 20, 21, 20, 19, 22, 19, 17, 22, 17, 23, 24, 23, 17, 25, 27, 26]
+            rel material:binding = </root/_materials/natureKit_stone>
+            normal3f[] normals = [(-0.6927377, -0.69273883, 0.20056757), (-0.69273794, -0.6927385, 0.20056832), (-0.6927379, -0.6927384, 0.20056835), (-0.6927382, -0.6927379, 0.20056933), (-0.6927379, -0.6927384, 0.20056835), (-0.69273794, -0.6927385, 0.20056832), (0, -7.549796e-8, -1), (0, -7.549796e-8, -1), (0, -7.549796e-8, -1), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 0.99999994, 0), (0, 1, 0), (0, 1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (-0.6179878, -0.6179975, 0.4859734), (-0.61799157, -0.61799127, 0.48597643), (-0.6180016, -0.617984, 0.48597324), (-0.61799234, -0.6179952, 0.48597062), (-0.6180016, -0.617984, 0.48597324), (-0.61799157, -0.61799127, 0.48597643), (-0.61799157, -0.61799127, 0.48597643), (-0.6179909, -0.6179912, 0.4859774), (-0.61799234, -0.6179952, 0.48597062), (-0.61799234, -0.6179952, 0.48597062), (-0.6179909, -0.6179912, 0.4859774), (-0.61799186, -0.617995, 0.48597145), (-0.61799157, -0.6179878, 0.48598093), (-0.61799186, -0.617995, 0.48597145), (-0.6179909, -0.6179912, 0.4859774), (-0.61799127, -0.61799204, 0.485976), (-0.6179909, -0.6179912, 0.4859774), (-0.61799157, -0.61799127, 0.48597643), (-0.61799127, -0.61799204, 0.485976), (-0.61799157, -0.61799127, 0.48597643), (-0.61799157, -0.61799365, 0.48597357), (-0.6179931, -0.6179976, 0.48596662), (-0.61799157, -0.61799365, 0.48597357), (-0.61799157, -0.61799127, 0.48597643), (0, 0, 1), (0, 0, 1), (0, 0, 1)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(-122, 31.41578, 3.460991e-7), (-126.58422, 36, 7.6263596e-18), (-122, 32.863426, 5), (-125.13657, 36, 5), (-122, 31.41578, 3.460991e-7), (-122, 36, 0), (-126.58422, 36, 7.6263596e-18), (-122, 36, 0), (-122, 36, 5), (-126.58422, 36, 7.6263596e-18), (-125.13657, 36, 5), (-122, 36, 0), (-122, 31.41578, 3.460991e-7), (-122, 36, 5), (-122, 32.863426, 5), (-123.693954, 33.91398, 4.181818), (-124.5093, 34.72933, 4.181818), (-123.33707, 33.87879, 4.590909), (-124.58001, 34.960884, 4.386364), (-125.13657, 36, 5), (-124.82128, 35.04131, 4.181818), (-125.779976, 36, 4.181818), (-122, 32.863426, 5), (-122, 32.220028, 4.1818185), (-123.30188, 33.521908, 4.181818), (-122, 36, 5), (-122, 32.863426, 5), (-125.13657, 36, 5)]
+            texCoord2f[] primvars:st = [(12.76195, -2.559643), (-12.76195, -2.559643), (8.731859, 17.5337), (-8.731859, 17.5337), (-6.252776e-13, 18.04812), (-3.581135e-12, 0), (-18.04812, 2.984279e-12), (3.581135e-12, -1.828383e-36), (-5.684342e-14, 19.68504), (18.04812, 2.979972e-17), (12.34871, 19.68504), (2.575646e-25, -2.90642e-25), (-18.04812, -1.560971e-25), (-4.462208e-12, 19.68504), (-12.34871, 19.68504), (1.091482, 9.275037), (-3.448195, 9.275037), (2.182965, 11.11788), (-4.28966, 10.19646), (-8.731859, 12.96072), (-5.185236, 9.275037), (-10.52301, 9.275037), (8.731859, 12.96072), (10.52301, 9.275037), (3.274447, 9.275037), (-5.684342e-14, 4.462208e-12), (1.477929e-12, 12.34871), (12.34871, 2.546585e-11)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 9, 8, 10, 8, 9, 11, 13, 12, 14, 12, 13, 15, 17, 16, 18, 16, 17, 17, 19, 18, 18, 19, 20, 21, 20, 19, 22, 19, 17, 22, 17, 23, 24, 23, 17, 25, 27, 26]
+            uniform token subdivisionScheme = "none"
+            uniform token subsetFamily:materialBind:familyType = "nonOverlapping"
+            custom string userProperties:blender:data_name = "Mesh"
+
+            def GeomSubset "natureKit_stone" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [0, 1, 2, 3, 4, 5, 6]
+                rel material:binding = </root/_materials/natureKit_stone>
+            }
+
+            def GeomSubset "natureKit_leavesGreen" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [7, 8, 9, 10, 11, 12, 13, 14, 15]
+                rel material:binding = </root/_materials/natureKit_leavesGreen>
+            }
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "natureKit_stone"
+        {
+            token outputs:surface.connect = </root/_materials/natureKit_stone/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "natureKit-stone"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.6588235, 0.8078431, 0.827451)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "natureKit_leavesGreen"
+        {
+            token outputs:surface.connect = </root/_materials/natureKit_leavesGreen/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "natureKit-leavesGreen"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.3529412, 0.7686275, 0.7137255)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+    }
+}
+

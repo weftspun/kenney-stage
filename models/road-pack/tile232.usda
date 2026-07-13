@@ -1,0 +1,145 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "tile232"
+    {
+        custom string userProperties:blender:object_name = "tile232"
+        custom string userProperties:currentUVSet = "map1"
+
+        def Mesh "Mesh" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-0.50000006, -0.5, -2.1855694e-8), (0.5, 0.5, 0.55)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 10, 9, 11, 9, 10, 12, 14, 13, 15, 13, 14, 16, 13, 15, 17, 16, 15, 18, 17, 15, 19, 18, 15, 20, 22, 21, 23, 21, 22, 24, 23, 22, 25, 23, 24, 26, 23, 25, 27, 23, 26, 28, 30, 29, 31, 29, 30, 32, 34, 33, 35, 33, 34, 33, 35, 36, 37, 36, 35, 38, 39, 28, 30, 28, 39, 36, 37, 38, 39, 38, 37]
+            rel material:binding = </root/_materials/grass>
+            normal3f[] normals = [(2.9802322e-8, 1, 0), (2.9802322e-8, 1, 0), (2.9802322e-8, 1, 0), (2.9802322e-8, 1, 0), (2.9802322e-8, 1, 0), (2.9802322e-8, 1, 0), (-2.9802322e-8, -1, 0), (-2.9802326e-8, -1, 0), (-2.9802326e-8, -1, 0), (-2.9802326e-8, -1, 0), (-2.9802326e-8, -1, 0), (-2.9802326e-8, -1, 0), (1, 0, 0), (1, -3.4692373e-8, 1.7346187e-8), (1, -7.367971e-8, 3.6839854e-8), (1, -1.0837208e-7, 5.418604e-8), (1, -7.367971e-8, 3.6839854e-8), (1, -3.4692373e-8, 1.7346187e-8), (0, 0, 1), (-1.3721775e-8, 0, 1), (-1.3331362e-7, 0, 1), (-3.094481e-8, 0, 1), (-1.3331362e-7, 0, 1), (-1.3721775e-8, 0, 1), (-3.3608745e-7, 0, 1), (-1.3331362e-7, 0, 1), (-3.094481e-8, 0, 1), (0, 0, 1), (-3.3608745e-7, 0, 1), (-3.094481e-8, 0, 1), (0, 0, 1), (0, 0, 1), (-3.094481e-8, 0, 1), (0, 0, 1), (0, 0, 1), (-3.094481e-8, 0, 1), (4.371139e-8, 0, -1), (4.3711392e-8, -3.4964077e-16, -1), (4.371139e-8, -1.1995956e-15, -1), (4.371139e-8, -1.5067523e-15, -1), (4.371139e-8, -1.1995956e-15, -1), (4.3711392e-8, -3.4964077e-16, -1), (4.371139e-8, 0, -1), (4.371139e-8, -1.5067523e-15, -1), (4.3711392e-8, -3.4964077e-16, -1), (4.371139e-8, -4.398081e-15, -1), (4.371139e-8, -1.5067523e-15, -1), (4.371139e-8, 0, -1), (4.3711385e-8, -5.6232044e-15, -1), (4.371139e-8, -1.5067523e-15, -1), (4.371139e-8, -4.398081e-15, -1), (4.3711378e-8, 0, -1), (4.371139e-8, -1.5067523e-15, -1), (4.3711385e-8, -5.6232044e-15, -1), (-1, 0, -3.094727e-8), (-1, 0, -5.4186046e-8), (-1, 0, -5.418603e-8), (-1, 0, -5.4186053e-8), (-1, 0, -5.418603e-8), (-1, 0, -5.4186046e-8), (-1, 0, -1.0837207e-7), (-1, 0, -1.0837208e-7), (-1, 0, -1.0837207e-7), (-1, 0, -1.0837207e-7), (-1, 0, -1.0837207e-7), (-1, 0, -1.0837208e-7), (-1, 0, -1.0837207e-7), (-1, 0, -1.0837207e-7), (-1, 0, -1.0837207e-7), (-1, 0, -7.963702e-8), (-1, 0, -1.0837207e-7), (-1, 0, -1.0837207e-7), (-1, 0, -2.8735057e-8), (-1, 0, -2.3238758e-8), (-1, 0, -3.094727e-8), (-1, 0, -5.4186046e-8), (-1, 0, -3.094727e-8), (-1, 0, -2.3238758e-8), (-1, 0, -1.0837207e-7), (-1, 0, -7.963702e-8), (-1, 0, -2.8735057e-8), (-1, 0, -2.3238758e-8), (-1, 0, -2.8735057e-8), (-1, 0, -7.963702e-8)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(0.5, 0.49999997, 2.1855694e-8), (0.5, 0.49999997, 0.55), (-0.49999997, 0.5, -2.1855694e-8), (-0.5, 0.5, 0.55), (0.49999994, -0.5, 0.55), (0.49999997, -0.5, 2.1855694e-8), (-0.50000006, -0.49999997, 0.55), (-0.5, -0.49999997, -2.1855694e-8), (0.5, 0.49999997, 2.1855694e-8), (0.49999997, -0.5, 2.1855694e-8), (0.5, 0.49999997, 0.55), (0.49999994, -0.5, 0.55), (-0.50000006, -0.49999997, 0.55), (-0.50000006, -0.37499997, 0.55), (0.49999994, -0.5, 0.55), (0.5, 0.49999997, 0.55), (-0.50000006, -0.24999999, 0.55), (-0.5, 0.25000003, 0.55), (-0.5, 0.37500003, 0.55), (-0.5, 0.5, 0.55), (-0.5, -0.49999997, -2.1855694e-8), (0.49999997, -0.5, 2.1855694e-8), (-0.5, -0.37499997, -2.1855694e-8), (0.5, 0.49999997, 2.1855694e-8), (-0.5, -0.24999999, -2.1855694e-8), (-0.5, 0.25000003, -2.1855694e-8), (-0.49999997, 0.37500003, -2.1855694e-8), (-0.49999997, 0.5, -2.1855694e-8), (-0.49999997, 0.37500003, -2.1855694e-8), (-0.49999997, 0.5, -2.1855694e-8), (-0.5, 0.37500003, 0.55), (-0.5, 0.5, 0.55), (-0.5, -0.49999997, -2.1855694e-8), (-0.5, -0.37499997, -2.1855694e-8), (-0.50000006, -0.49999997, 0.55), (-0.50000006, -0.37499997, 0.55), (-0.5, -0.24999999, -2.1855694e-8), (-0.50000006, -0.24999999, 0.55), (-0.5, 0.25000003, -2.1855694e-8), (-0.5, 0.25000003, 0.55)]
+            texCoord2f[] primvars:st = [(-19.68504, 0), (-19.68504, 21.65354), (19.68504, 0), (19.68504, 21.65354), (19.68504, 21.65354), (19.68504, 0), (-19.68504, 21.65354), (-19.68504, 0), (19.68504, -1.10606e-29), (-19.68504, -1.10606e-29), (19.68504, 21.65354), (-19.68504, 21.65354), (-19.68504, 19.68504), (-14.76378, 19.68504), (-19.68504, -19.68504), (19.68504, -19.68504), (-9.84252, 19.68504), (9.84252, 19.68504), (14.76378, 19.68504), (19.68504, 19.68504), (19.68504, 19.68504), (19.68504, -19.68504), (14.76378, 19.68504), (-19.68504, -19.68504), (9.84252, 19.68504), (-9.84252, 19.68504), (-14.76378, 19.68504), (-19.68504, 19.68504), (-14.76378, 2.756045e-13), (-19.68504, 6.890112e-14), (-14.76378, 21.65354), (-19.68504, 21.65354), (19.68504, 6.890112e-14), (14.76378, 2.756045e-13), (19.68504, 21.65354), (14.76378, 21.65354), (9.84252, 2.756045e-13), (9.84252, 21.65354), (-9.84252, 2.756045e-13), (-9.84252, 21.65354)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 10, 9, 11, 9, 10, 12, 14, 13, 15, 13, 14, 16, 13, 15, 17, 16, 15, 18, 17, 15, 19, 18, 15, 20, 22, 21, 23, 21, 22, 24, 23, 22, 25, 23, 24, 26, 23, 25, 27, 23, 26, 28, 30, 29, 31, 29, 30, 32, 34, 33, 35, 33, 34, 33, 35, 36, 37, 36, 35, 38, 39, 28, 30, 28, 39, 36, 37, 38, 39, 38, 37]
+            uniform token subdivisionScheme = "none"
+            uniform token subsetFamily:materialBind:familyType = "nonOverlapping"
+            custom string userProperties:blender:data_name = "Mesh"
+
+            def GeomSubset "grass" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+                rel material:binding = </root/_materials/grass>
+            }
+
+            def GeomSubset "pavement" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [22, 23, 24, 25]
+                rel material:binding = </root/_materials/pavement>
+            }
+
+            def GeomSubset "water" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [26, 27]
+                rel material:binding = </root/_materials/water>
+            }
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "grass"
+        {
+            token outputs:surface.connect = </root/_materials/grass/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "grass"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.5411765, 0.7098039, 0.2862745)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "pavement"
+        {
+            token outputs:surface.connect = </root/_materials/pavement/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "pavement"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.8470588, 0.827451, 0.7490196)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "water"
+        {
+            token outputs:surface.connect = </root/_materials/water/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "water"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.6901961, 0.8431373, 0.9647059)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+    }
+}
+

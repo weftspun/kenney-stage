@@ -1,0 +1,142 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "wall"
+    {
+        custom string userProperties:blender:object_name = "wall"
+        custom string userProperties:currentUVSet = "map1"
+
+        def Mesh "Mesh" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-10, -0.5, 0), (0, 9.735696e-7, 12.89532)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 10, 9, 11, 13, 12, 14, 16, 15, 17, 19, 18, 20, 22, 21, 23, 25, 24, 26, 28, 27, 29, 27, 28]
+            rel material:binding = </root/_materials/wood>
+            normal3f[] normals = [(0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0.99999994, 0, 0), (0.99999994, 0, 0), (0.99999994, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (0, 1, -7.54979e-8), (0, 1, -7.54979e-8), (0, 1, -7.54979e-8), (0, 1, -7.54979e-8), (0, 1, -7.54979e-8), (0, 1, -7.54979e-8), (0, -1, 7.395507e-8), (0, -1, 7.824502e-8), (0, -1, 7.706063e-8), (0, -1, 8.135058e-8), (0, -1, 7.706063e-8), (0, -1, 7.824502e-8)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(0, -0.5, 3.774895e-8), (0, 0, 0), (-10, -0.5, 3.774895e-8), (-10, 0, 0), (0, 9.735696e-7, 12.89532), (0, -0.49999902, 12.89532), (-10, 9.735696e-7, 12.89532), (-10, -0.49999902, 12.89532), (0, 9.735696e-7, 12.89532), (0, 0, 0), (0, -0.49999902, 12.89532), (0, -0.5, 3.774895e-8), (0, -0.49999902, 12.89532), (0, 0, 0), (-10, 0, 0), (-10, 9.735696e-7, 12.89532), (-10, -0.5, 3.774895e-8), (-10, -0.49999902, 12.89532), (-10, -0.5, 3.774895e-8), (-10, 9.735696e-7, 12.89532), (-10, 0, 0), (0, 0, 0), (-10, 9.735696e-7, 12.89532), (0, 9.735696e-7, 12.89532), (-10, 9.735696e-7, 12.89532), (0, 0, 0), (0, -0.5, 3.774895e-8), (-10, -0.5, 3.774895e-8), (0, -0.49999902, 12.89532), (-10, -0.49999902, 12.89532)]
+            texCoord2f[] primvars:st = [(0, 1.968504), (0, 0), (-39.37008, 1.968504), (-39.37008, 0), (0, 0), (0, 1.968504), (39.37008, 0), (39.37008, 1.968504), (-39.37008, 0), (-39.37008, 1.968504), (0, 0), (-39.37008, 0), (-39.37008, 1.968504), (0, 0), (39.37008, 1.968504), (39.37008, 0), (0, 1.968504), (39.37008, 1.968504), (39.37008, 0), (0, 1.968504), (-39.37008, 50.76897), (0, 50.76897), (-39.37008, 0), (-39.37008, 50.76897), (0, 50.76897), (-39.37008, 0), (0, 0), (-39.37008, 0), (0, 50.76897), (-39.37008, 50.76897)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 10, 9, 11, 13, 12, 14, 16, 15, 17, 19, 18, 20, 22, 21, 23, 25, 24, 26, 28, 27, 29, 27, 28]
+            uniform token subdivisionScheme = "none"
+            uniform token subsetFamily:materialBind:familyType = "nonOverlapping"
+            custom string userProperties:blender:data_name = "Mesh"
+
+            def GeomSubset "wood" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [0, 1, 2, 3]
+                rel material:binding = </root/_materials/wood>
+            }
+
+            def GeomSubset "_defaultMat" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [4, 5, 6, 7, 8, 9]
+                rel material:binding = </root/_materials/_defaultMat>
+            }
+
+            def GeomSubset "metalDark" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [10, 11]
+                rel material:binding = </root/_materials/metalDark>
+            }
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "wood"
+        {
+            token outputs:surface.connect = </root/_materials/wood/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "wood"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.8962264, 0.6015712, 0.3931559)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "_defaultMat"
+        {
+            token outputs:surface.connect = </root/_materials/_defaultMat/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "_defaultMat"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (1, 1, 1)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "metalDark"
+        {
+            token outputs:surface.connect = </root/_materials/metalDark/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "metalDark"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.3058824, 0.3882353, 0.3882353)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+    }
+}
+

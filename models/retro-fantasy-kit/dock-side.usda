@@ -1,0 +1,149 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "dock_side"
+    {
+        custom string userProperties:blender:object_name = "dock-side"
+
+        def Mesh "Scene" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-0.5, -0.5, -3.7748947e-8), (0.5, 0.6000001, 0.50000006)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 7, 6, 0, 8, 6, 2, 0, 6, 9, 1, 10, 11, 10, 1, 3, 11, 1, 11, 12, 10, 13, 10, 12, 9, 10, 8, 7, 8, 10, 13, 12, 5, 4, 5, 12, 7, 10, 5, 13, 5, 10, 4, 12, 6, 11, 6, 12, 6, 11, 2, 3, 2, 11, 0, 1, 8, 9, 8, 1]
+            rel material:binding = </root/_materials/stones>
+            normal3f[] normals = [(0, -1, 0), (0, -1, 3.5186623e-8), (0, -1, 8.4022666e-8), (0, -1, 1.1920929e-7), (0, -1, 8.4022666e-8), (0, -1, 3.5186623e-8), (0.99999994, 0, 0), (1, -1.04622035e-8, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, -1.04622035e-8, 0), (1, 0, 0), (1, 0, 0), (1, -1.04622035e-8, 0), (1, -4.4531046e-8, 0), (1, 0, 0), (1, -1.04622035e-8, 0), (1, -6.545528e-8, 0), (1, -4.4531046e-8, 0), (1, -1.04622035e-8, 0), (-1, 8.5149495e-8, 0), (-1, -2.6283699e-8, 0), (-1, 2.2299277e-8, 0), (-1, -1.0462096e-8, 0), (-1, 2.2299277e-8, 0), (-1, -2.6283699e-8, 0), (-1, -6.545528e-8, 0), (-1, -1.0462096e-8, 0), (-1, -2.6283699e-8, 0), (-1, -1.0462096e-8, 0), (-1, 0, 0), (-1, 2.2299277e-8, 0), (-1, 0, 0), (-1, 2.2299277e-8, 0), (-1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -7.5312045e-8), (0, 1, -7.1941656e-7), (0, 1, -7.947286e-7), (0, 1, -7.1941656e-7), (0, 1, -7.5312045e-8), (0, -2.9802317e-7, -1), (0, -2.9802317e-7, -1), (0, -2.9802317e-7, -1), (0, -2.9802317e-7, -1), (0, -2.9802317e-7, -1), (0, -2.9802317e-7, -1), (0, 1.5736464e-7, 1), (0, 1.5736472e-7, 1), (0, 1.277735e-7, 1), (0, 1.2777302e-7, 1), (0, 1.277735e-7, 1), (0, 1.5736472e-7, 1), (0, 1.277735e-7, 1), (0, 1.2777302e-7, 1), (0, 9.818292e-8, 1), (0, 9.818292e-8, 1), (0, 9.818292e-8, 1), (0, 1.2777302e-7, 1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1), (0, -7.5497894e-8, -1)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(0.5, -0.5, 3.7748947e-8), (-0.5, -0.5, 3.7748947e-8), (0.5, -0.49999997, 0.50000006), (-0.5, -0.49999997, 0.50000006), (0.5, 0.6000001, 0.49999994), (0.5, 0.6, 0.34999993), (0.5, 0.41061628, 0.49999997), (0.5, 0.5, 0.34999996), (0.5, 0.5, -3.7748947e-8), (-0.5, 0.5, -3.7748947e-8), (-0.5, 0.5, 0.34999996), (-0.5, 0.41061628, 0.49999997), (-0.5, 0.6000001, 0.49999994), (-0.5, 0.6, 0.34999993)]
+            texCoord2f[] primvars:st = [(-2, 0), (0, 0), (-3, 0), (1, 0), (-1, 0), (-2, 0.5), (0, 0), (-3, 0.5), (1, 0.5), (1, 0), (-0.9, 0.5), (-1, 0.5), (-1.0303563, 0.4975342), (-0.9, 0.35), (-1, 0.35), (16.50436, -7.9723663), (-1.0893837, 0.5), (-1.0303562, 0.5902271), (0, -0.9106163), (-1, 0.35), (16.50436, -7.872366), (-1, 0), (0, -1), (-1.110223e-16, 0), (-1, -1), (-1.110223e-16, 0.35), (15.504361, -7.872366), (0.08938374, 0.5), (-0.5409111, 0.5902273), (1, -0.9106163), (-0.1, 0.5), (0, 0.5), (-0.54091114, 0.4975344), (-0.1, 0.35), (0, 0.35), (15.504361, -7.9723663)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 5, 2, 7, 2, 5, 10, 16, 13, 19, 13, 16, 21, 19, 16, 0, 21, 16, 5, 0, 16, 23, 3, 25, 27, 25, 3, 8, 27, 3, 27, 30, 25, 33, 25, 30, 23, 25, 21, 19, 21, 25, 34, 31, 14, 11, 14, 31, 20, 26, 15, 35, 15, 26, 12, 32, 17, 28, 17, 32, 18, 29, 6, 9, 6, 29, 1, 4, 22, 24, 22, 4]
+            uniform token subdivisionScheme = "none"
+            uniform token subsetFamily:materialBind:familyType = "nonOverlapping"
+            custom string userProperties:blender:data_name = "Scene"
+
+            def GeomSubset "stones" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+                rel material:binding = </root/_materials/stones>
+            }
+
+            def GeomSubset "bricks" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [20, 21, 22, 23]
+                rel material:binding = </root/_materials/bricks>
+            }
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "stones"
+        {
+            token outputs:surface.connect = </root/_materials/stones/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "stones"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor.connect = </root/_materials/stones/Image_Texture.outputs:rgb>
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5
+                float inputs:specular = 0.5
+                token outputs:surface
+            }
+
+            def Shader "Image_Texture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./textures/cobblestone.png@
+                token inputs:sourceColorSpace = "sRGB"
+                float2 inputs:st.connect = </root/_materials/stones/uvmap.outputs:result>
+                token inputs:wrapS = "repeat"
+                token inputs:wrapT = "repeat"
+                float3 outputs:rgb
+            }
+
+            def Shader "uvmap"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                string inputs:varname = "st"
+                float2 outputs:result
+            }
+        }
+
+        def Material "bricks"
+        {
+            token outputs:surface.connect = </root/_materials/bricks/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "bricks"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor.connect = </root/_materials/bricks/Image_Texture.outputs:rgb>
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5
+                float inputs:specular = 0.5
+                token outputs:surface
+            }
+
+            def Shader "Image_Texture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./textures/cobblestoneAlternative.png@
+                token inputs:sourceColorSpace = "sRGB"
+                float2 inputs:st.connect = </root/_materials/bricks/uvmap.outputs:result>
+                token inputs:wrapS = "repeat"
+                token inputs:wrapT = "repeat"
+                float3 outputs:rgb
+            }
+
+            def Shader "uvmap"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                string inputs:varname = "st"
+                float2 outputs:result
+            }
+        }
+    }
+}
+

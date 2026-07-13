@@ -1,0 +1,81 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "tile_070"
+    {
+        custom string userProperties:blender:object_name = "tile_070"
+        custom string userProperties:currentUVSet = "map1"
+
+        def Mesh "Mesh" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-0.35698113, -0.35698113, -2.6951325e-8), (0.35698113, 0.35698113, 0.40000004)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 10, 9, 11, 9, 10, 12, 14, 13, 15, 13, 14, 16, 18, 17, 19, 17, 18, 20, 22, 21, 23, 21, 22]
+            rel material:binding = </root/_materials/brick>
+            normal3f[] normals = [(0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, 1.0101601e-7, 1), (0, 1.0101603e-7, 1), (0, 1.0101603e-7, 1), (0, 1.0101602e-7, 1), (0, 1.0101603e-7, 1), (0, 1.0101603e-7, 1), (0, 0.98821646, 0.1530632), (0, 0.98821634, 0.15306327), (0, 0.9882164, 0.15306336), (0, 0.98821634, 0.15306345), (0, 0.9882164, 0.15306336), (0, 0.98821634, 0.15306327), (0, -0.98821634, 0.15306337), (0, -0.98821634, 0.15306343), (0, -0.9882164, 0.15306352), (0, -0.98821634, 0.15306358), (0, -0.9882164, 0.15306352), (0, -0.98821634, 0.15306343), (0.98821634, 0, 0.1530634), (0.98821634, 0, 0.1530634), (0.9882164, 0, 0.15306342), (0.98821634, 0, 0.1530634), (0.9882164, 0, 0.15306342), (0.98821634, 0, 0.1530634), (-0.98821634, 0, 0.1530634), (-0.9882164, 0, 0.15306342), (-0.98821634, 0, 0.1530634), (-0.98821634, 0, 0.1530634), (-0.98821634, 0, 0.1530634), (-0.9882164, 0, 0.15306342)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(0.35698113, 0.35698113, -2.6951325e-8), (-0.35698113, 0.35698113, -2.6951325e-8), (0.35698113, -0.35698113, 2.6951325e-8), (-0.35698113, -0.35698113, 2.6951325e-8), (0.2950257, 0.29502574, 0.39999998), (0.2950257, -0.29502568, 0.40000004), (-0.2950257, 0.29502574, 0.39999998), (-0.2950257, -0.29502568, 0.40000004), (-0.35698113, 0.35698113, -2.6951325e-8), (0.35698113, 0.35698113, -2.6951325e-8), (-0.2950257, 0.29502574, 0.39999998), (0.2950257, 0.29502574, 0.39999998), (0.35698113, -0.35698113, 2.6951325e-8), (-0.35698113, -0.35698113, 2.6951325e-8), (0.2950257, -0.29502568, 0.40000004), (-0.2950257, -0.29502568, 0.40000004), (0.35698113, 0.35698113, -2.6951325e-8), (0.35698113, -0.35698113, 2.6951325e-8), (0.2950257, 0.29502574, 0.39999998), (0.2950257, -0.29502568, 0.40000004), (-0.35698113, 0.35698113, -2.6951325e-8), (-0.2950257, 0.29502574, 0.39999998), (-0.35698113, -0.35698113, 2.6951325e-8), (-0.2950257, -0.29502568, 0.40000004)]
+            texCoord2f[] primvars:st = [(14.05437, -14.05437), (-14.05437, -14.05437), (14.05437, 14.05437), (-14.05437, 14.05437), (-11.61519, -11.61519), (-11.61519, 11.61519), (11.61519, -11.61519), (11.61519, 11.61519), (14.05437, -2.15121), (-14.05437, -2.15121), (11.61519, 13.7846), (-11.61519, 13.7846), (14.05437, -2.15121), (-14.05437, -2.15121), (11.61519, 13.7846), (-11.61519, 13.7846), (14.05437, -2.15121), (-14.05437, -2.15121), (11.61519, 13.7846), (-11.61519, 13.7846), (-14.05437, -2.15121), (-11.61519, 13.7846), (14.05437, -2.15121), (11.61519, 13.7846)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 10, 9, 11, 9, 10, 12, 14, 13, 15, 13, 14, 16, 18, 17, 19, 17, 18, 20, 22, 21, 23, 21, 22]
+            uniform token subdivisionScheme = "none"
+            custom string userProperties:blender:data_name = "Mesh"
+        }
+
+        def Xform "Group"
+        {
+            custom string userProperties:blender:object_name = "Group"
+            custom string userProperties:currentUVSet = "map1"
+            float3 xformOp:rotateXYZ = (90, 0.000005122642, 90)
+            float3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.5, 0.5, -3.774895063202166e-8)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "brick"
+        {
+            token outputs:surface.connect = </root/_materials/brick/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "brick"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.7568628, 0.8, 0.7568628)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+    }
+}
+

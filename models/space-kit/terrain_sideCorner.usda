@@ -1,0 +1,114 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "terrain_sideCorner"
+    {
+        custom string userProperties:blender:object_name = "terrain_sideCorner"
+        custom string userProperties:currentUVSet = "map1"
+
+        def Mesh "Mesh" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-3, 0.5, -3.5527137e-16), (-2, 1.5, 0.50000006)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 5, 9, 7, 9, 5, 6, 9, 7, 10, 9, 6, 11, 13, 12, 14, 12, 13, 15, 17, 16, 18, 16, 17]
+            rel material:binding = </root/_materials/rock>
+            normal3f[] normals = [(0, 7.5497894e-8, 1), (0, 7.5497894e-8, 1), (0, 7.5497894e-8, 1), (0, 7.5497894e-8, 1), (0, 7.5497894e-8, 1), (0, 7.5497894e-8, 1), (0, 0, 1), (0, 0, 1), (0, 9.478765e-8, 1), (0, 0, 1), (0, 9.478765e-8, 1), (0, 0, 1), (0, 2.3841858e-7, 1), (0, 9.478765e-8, 1), (0, 6.928967e-8, 1), (0, 0, 1), (0, 6.928967e-8, 1), (0, 9.478765e-8, 1), (0, 0, 1), (0, 6.928967e-8, 1), (0, 0, 1), (0, 0, 1), (0, 6.928967e-8, 1), (0, 0, 1), (-0.22941591, -0.68824697, 0.68824744), (-0.22941573, -0.6882472, 0.6882472), (-0.22941571, -0.6882473, 0.68824714), (-0.22941561, -0.68824744, 0.688247), (-0.22941571, -0.6882473, 0.68824714), (-0.22941573, -0.6882472, 0.6882472), (-0.6882471, -0.22941577, 0.6882473), (-0.68824714, -0.22941574, 0.68824726), (-0.68824714, -0.22941571, 0.68824714), (-0.68824726, -0.22941573, 0.6882472), (-0.68824714, -0.22941571, 0.68824714), (-0.68824714, -0.22941574, 0.68824726)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(-2, 0.5, 7.54979e-8), (-3, 0.5, 7.54979e-8), (-2.75, 0.75, 5.6623428e-8), (-3, 1.5, -3.5527137e-16), (-2, 1.5, 0.5), (-2, 1.25, 0.5), (-2.25, 1.5, 0.5), (-2.1875, 1.3125, 0.5), (-2, 1, 0.50000006), (-2.375, 1.125, 0.5), (-2.5, 1.5, 0.5), (-2, 1, 0.50000006), (-2, 0.5, 7.54979e-8), (-2.375, 1.125, 0.5), (-2.75, 0.75, 5.6623428e-8), (-2.375, 1.125, 0.5), (-2.75, 0.75, 5.6623428e-8), (-2.5, 1.5, 0.5), (-3, 1.5, -3.5527137e-16)]
+            texCoord2f[] primvars:st = [(0, 39.37008), (39.37008, 39.37008), (29.52756, 29.52756), (39.37008, 0), (0, 2.842171e-14), (2.842171e-14, 9.84252), (9.842521, -2.842171e-14), (7.38189, 7.381889), (0, 19.68504), (14.76378, 14.76378), (19.68504, 2.842171e-14), (6.224956, 1.428103), (12.44991, -25.70585), (-9.337434, 1.428103), (-18.67487, -25.70585), (9.337434, 1.428103), (18.67487, -25.70585), (-6.224956, 1.428103), (-12.44991, -25.70585)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 8, 5, 9, 7, 9, 5, 6, 9, 7, 10, 9, 6, 11, 13, 12, 14, 12, 13, 15, 17, 16, 18, 16, 17]
+            uniform token subdivisionScheme = "none"
+            uniform token subsetFamily:materialBind:familyType = "nonOverlapping"
+            custom string userProperties:blender:data_name = "Mesh"
+
+            def GeomSubset "rock" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [0, 1, 2, 3]
+                rel material:binding = </root/_materials/rock>
+            }
+
+            def GeomSubset "rockDark" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token elementType = "face"
+                uniform token familyName = "materialBind"
+                int[] indices = [4, 5, 6, 7, 8, 9, 10, 11]
+                rel material:binding = </root/_materials/rockDark>
+            }
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "rock"
+        {
+            token outputs:surface.connect = </root/_materials/rock/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "rock"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.9098039, 0.5176471, 0.3882353)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "rockDark"
+        {
+            token outputs:surface.connect = </root/_materials/rockDark/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "rockDark"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor = (0.6980392, 0.372549, 0.2627451)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5527864
+                float inputs:specular = 1
+                token outputs:surface
+            }
+        }
+    }
+}
+

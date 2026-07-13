@@ -1,0 +1,5 @@
+_dl/
+_itch/
+*.pyc
+__pycache__/
+.pixi/

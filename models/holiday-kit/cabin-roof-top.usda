@@ -1,0 +1,89 @@
+#usda 1.0
+(
+    defaultPrim = "root"
+    doc = "Blender v5.1.2"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "root" (
+    customData = {
+        dictionary Blender = {
+            bool generated = 1
+        }
+    }
+)
+{
+    float3 xformOp:rotateXYZ = (-90, -0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+
+    def Xform "cabin_roof_top"
+    {
+        custom string userProperties:blender:object_name = "cabin-roof-top"
+
+        def Mesh "Scene" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            uniform bool doubleSided = 1
+            float3[] extent = [(-0.099999994, -0.5, -3.7748947e-8), (0.099999994, 0.5, 0.20000003)]
+            int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+            int[] faceVertexIndices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 3, 2, 6, 7, 6, 2, 3, 6, 1, 4, 1, 6, 4, 5, 1, 0, 1, 5, 0, 5, 2, 7, 2, 5]
+            rel material:binding = </root/_materials/colormap>
+            normal3f[] normals = [(0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0, -7.54979e-8, -1), (0.70710677, 6.322026e-8, 0.7071067), (-0.70710677, 5.1704202e-8, 0.70710677), (0.70710695, 5.1704195e-8, 0.70710665), (-0.7071068, 6.322027e-8, 0.7071067), (0.70710695, 5.1704195e-8, 0.70710665), (-0.70710677, 5.1704202e-8, 0.70710677), (-1, -1.8626453e-8, 0), (-1, -2.3402715e-9, 0), (-0.70710677, 5.1704202e-8, 0.70710677), (-0.7071068, 6.322027e-8, 0.7071067), (-0.70710677, 5.1704202e-8, 0.70710677), (-1, -2.3402715e-9, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0.70710677, 6.322026e-8, 0.7071067), (0.70710695, 5.1704195e-8, 0.70710665), (1, -2.3402777e-9, 0), (1, -1.8626453e-8, 0), (1, -2.3402777e-9, 0), (0.70710695, 5.1704195e-8, 0.70710665), (0, -1, 0), (0, -1, 1.8626454e-7), (0, -1, 1.8626454e-7), (0, -1, 3.725291e-7), (0, -1, 1.8626454e-7), (0, -1, 1.8626454e-7)] (
+                interpolation = "faceVarying"
+            )
+            point3f[] points = [(0.099999994, -0.5, 3.7748947e-8), (0.099999994, 0.5, -3.7748947e-8), (-0.099999994, -0.5, 3.7748947e-8), (-0.099999994, 0.5, -3.7748947e-8), (0.099999994, 0.5, 0.19999994), (0.099999994, -0.49999997, 0.20000003), (-0.099999994, 0.5, 0.19999994), (-0.099999994, -0.49999997, 0.20000003)]
+            texCoord2f[] primvars:st = [(0.21875, 0.275), (0.21875, 0.275), (0.21875, 0.275), (0.21875, 0.275), (0.21875, 0.475), (0.21875, 0.475), (0.21875, 0.475), (0.21875, 0.475)] (
+                interpolation = "faceVarying"
+            )
+            int[] primvars:st:indices = [0, 2, 1, 3, 1, 2, 4, 6, 5, 7, 5, 6, 3, 2, 6, 7, 6, 2, 3, 6, 1, 4, 1, 6, 4, 5, 1, 0, 1, 5, 0, 5, 2, 7, 2, 5]
+            uniform token subdivisionScheme = "none"
+            custom string userProperties:blender:data_name = "Scene"
+        }
+    }
+
+    def Scope "_materials"
+    {
+        def Material "colormap"
+        {
+            token outputs:surface.connect = </root/_materials/colormap/Principled_BSDF.outputs:surface>
+            custom string userProperties:blender:data_name = "colormap"
+
+            def Shader "Principled_BSDF"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                float inputs:clearcoat = 0
+                float inputs:clearcoatRoughness = 0.03
+                color3f inputs:diffuseColor.connect = </root/_materials/colormap/Image_Texture.outputs:rgb>
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:ior = 1.5
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5
+                float inputs:specular = 0.5
+                token outputs:surface
+            }
+
+            def Shader "Image_Texture"
+            {
+                uniform token info:id = "UsdUVTexture"
+                asset inputs:file = @./textures/colormap.png@
+                token inputs:sourceColorSpace = "sRGB"
+                float2 inputs:st.connect = </root/_materials/colormap/uvmap.outputs:result>
+                token inputs:wrapS = "repeat"
+                token inputs:wrapT = "repeat"
+                float3 outputs:rgb
+            }
+
+            def Shader "uvmap"
+            {
+                uniform token info:id = "UsdPrimvarReader_float2"
+                string inputs:varname = "st"
+                float2 outputs:result
+            }
+        }
+    }
+}
+
